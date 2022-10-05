@@ -16,7 +16,7 @@ body {
     margin: 42px;
     padding: 42px;
     height: 890px;
-    font-family: 'Oswald', 'sf';
+    font-family: "Oswald", "sf";
     letter-spacing: 2px;
 }
 
@@ -78,12 +78,11 @@ a:hover {
     right: 84px;
     height: 780px;
     width: 1050px;
-} 
+}
 
 .section {
     font-size: 42px;
 }
-
 
 #about-me {
     padding-top: 140px;
@@ -126,7 +125,6 @@ a:hover {
 img {
     height: 100%;
     width: 100%;
-
 }
 
 .close-mid-tiles {
@@ -146,4 +144,3 @@ img {
 .sidebar {
     margin: 0;
 }
-
