@@ -27,6 +27,8 @@ handleSectionClick = (e) => {
         aboutMeButton.innerHTML="∎";
         myWorkButton.innerHTML=pageHeadings.MY_WORK;
         contactMeButton.innerHTML=pageHeadings.CONTACT_ME;
+        socialsDiv.style.display = "none";
+        sidebarElement.style.display = "none";
     } else if (e.target.id === "my-work-button"){
         aboutMeDiv.style.display = "none";
         myWorkDiv.style.display = "inline-block";
@@ -34,6 +36,8 @@ handleSectionClick = (e) => {
         aboutMeButton.innerHTML= pageHeadings.ABOUT_ME;
         myWorkButton.innerHTML="∎";
         contactMeButton.innerHTML=pageHeadings.CONTACT_ME;
+        sidebarElement.style.display = "none";
+        socialsDiv.style.display = "inline-block";
     } else if (e.target.id === "contact-button"){
         aboutMeDiv.style.display = "none";
         myWorkDiv.style.display = "none";
@@ -41,21 +45,9 @@ handleSectionClick = (e) => {
         aboutMeButton.innerHTML=pageHeadings.ABOUT_ME;
         myWorkButton.innerHTML=pageHeadings.MY_WORK;
         contactMeButton.innerHTML="∎";
-    }
-
-    if (e.target.id === "contact-button"){
         socialsDiv.style.display = "inline-block";
         sidebarElement.style.display = "inline-block";
-    } else {
-        socialsDiv.style.display = "none";
-        sidebarElement.style.display = "none";
-    }
-
-    if (e.target.id === "my-work-button"){
-        socialsDiv.style.display = "inline-block";
     }
 }
-
-
 
 sectionNavigation.addEventListener('click', handleSectionClick);
