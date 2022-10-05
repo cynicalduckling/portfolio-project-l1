@@ -1,0 +1,149 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    /* border: thin solid black; */
+}
+
+.total {
+    background-image: url(https://cdn.discordapp.com/attachments/431354432987594763/1027119185307914250/ezgif-4-31bc060430.gif);
+    background-size: 2100px 980px;
+    display: block;
+    border: thin solid black;
+    margin: 42px;
+    padding: 42px;
+    height: 890px;
+    font-family: 'Oswald', 'sf';
+    letter-spacing: 2px;
+}
+
+#name {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 72px;
+}
+
+#title {
+    display: inline-block;
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+#seperator {
+    display: inline-block;
+}
+
+#socials {
+    display: none;
+    position: absolute;
+    top: 84px;
+    right: 84px;
+}
+
+.social-links {
+    color: black;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: large;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav-buttons {
+    display: inline-block;
+    color: black;
+    margin: 0px 0px 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-buttons:hover {
+    cursor: pointer;
+}
+
+.section-container {
+    display: inline-block;
+    position: absolute;
+    bottom: 84px;
+    right: 84px;
+    height: 780px;
+    width: 1050px;
+} 
+
+.section {
+    font-size: 42px;
+}
+
+
+#about-me {
+    padding-top: 140px;
+    font-size: 32px;
+}
+
+#contact-me {
+    padding-top: 140px;
+    font-size: 32px;
+    display: none;
+}
+
+#my-work {
+    padding-top: 0;
+    display: none;
+    text-align: center;
+}
+
+.work-tiles {
+    display: inline-block;
+    width: 380px;
+    height: 264px;
+    margin: 46px;
+    background-color: none;
+}
+
+.work-image {
+    width: 100%;
+    height: 214px;
+}
+
+.work-caption {
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.close-mid-tiles {
+    margin-left: 0;
+}
+
+#sidebar-bottom-left {
+    display: none;
+    position: absolute;
+    left: 84px;
+    bottom: 84px;
+    height: 390px;
+    font-weight: bold;
+    width: 200px;
+}
+
+.sidebar {
+    margin: 0;
+}
+
