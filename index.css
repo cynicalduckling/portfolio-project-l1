@@ -72,12 +72,14 @@ a:hover {
 }
 
 .section-container {
-    display: inline-block;
+    display: flex;
     position: absolute;
+    justify-content: left;
+    align-items: center;
+    top: 84px;
     bottom: 84px;
     right: 84px;
-    height: 780px;
-    width: 1050px;
+    width: 50%;
 }
 
 .section {
@@ -85,18 +87,16 @@ a:hover {
 }
 
 #about-me {
-    padding-top: 140px;
     font-size: 32px;
 }
 
 #contact-me {
-    padding-top: 140px;
+    vertical-align: middle;
     font-size: 32px;
     display: none;
 }
 
 #my-work {
-    padding-top: 0;
     display: none;
     text-align: center;
 }
@@ -112,9 +112,11 @@ a:hover {
 .work-image {
     width: 100%;
     height: 214px;
+    margin: 0;
 }
 
 .work-caption {
+    margin: 0;
     font-weight: bold;
     padding-top: 10px;
     font-size: 20px;
