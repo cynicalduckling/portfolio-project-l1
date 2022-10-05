@@ -1,7 +1,8 @@
 body {
     background-color: black;
+    height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 42px;
 }
 
 * {
@@ -13,7 +14,6 @@ body {
     background-size: 2100px 980px;
     display: block;
     border: thin solid black;
-    margin: 42px;
     padding: 42px;
     height: 890px;
     font-family: "Oswald", "sf";
