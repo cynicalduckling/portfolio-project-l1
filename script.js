@@ -4,7 +4,7 @@ const pageHeadings = {
     ABOUT_ME: "ABOUT ME",
 };
 
-let sectionNavigation = document.querySelector(".section-navigation");
+let navButtonsDiv = document.querySelector(".nav-buttons-div");
 let aboutMeDiv = document.querySelector("#about-me");
 let myWorkDiv = document.querySelector("#my-work");
 let contactDiv = document.querySelector("#contact-me");
@@ -18,26 +18,26 @@ let topRightSocialsDiv = document.querySelector("#top-right-socials");
 
 aboutMeButton.innerHTML = "∎";
 
-let sectionObjects = {
-    "about-me-button": aboutMeDiv,
-    "my-work-button": myWorkDiv,
-    "contact-button": contactDiv
-}
-
 handleSectionClick = (e) => {
+    if (e.target != navButtonsDiv) {
+        let currentSelectionId = e.target.id;
+        let sectionObjects = {
+            "about-me-button": aboutMeDiv,
+            "my-work-button": myWorkDiv,
+            "contact-button": contactDiv
+        }
 
-    let currentSelectionId = e.target.id;
+        for (let obj in sectionObjects) {
+            sectionObjects[obj].style.display = (obj === currentSelectionId) ? "inline-block" : "none";
+        }
 
-    for (let obj in sectionObjects) {
-        sectionObjects[obj].style.display = (obj === currentSelectionId) ? "inline-block" : "none";
+        aboutMeButton.innerHTML = (currentSelectionId === "about-me-button") ? "∎" : pageHeadings.ABOUT_ME;
+        myWorkButton.innerHTML = (currentSelectionId === "my-work-button") ? "∎" : pageHeadings.MY_WORK;
+        contactMeButton.innerHTML = (currentSelectionId === "contact-button") ? "∎" : pageHeadings.CONTACT_ME;
+
+        topRightSocialsDiv.style.display = (currentSelectionId === "my-work-button" || currentSelectionId === "contact-button") ? "inline-block" : "none";
+        sidebarElement.style.display = (currentSelectionId === "contact-button") ? "inline-block" : "none";
     }
-
-    aboutMeButton.innerHTML = (currentSelectionId === "about-me-button") ? "∎" : pageHeadings.ABOUT_ME;
-    myWorkButton.innerHTML = (currentSelectionId === "my-work-button") ? "∎" : pageHeadings.MY_WORK;
-    contactMeButton.innerHTML = (currentSelectionId === "contact-button") ? "∎" : pageHeadings.CONTACT_ME;
-
-    topRightSocialsDiv.style.display = (currentSelectionId === "my-work-button" || currentSelectionId === "contact-button") ? "inline-block" : "none";
-    sidebarElement.style.display = (currentSelectionId === "contact-button") ? "inline-block" : "none";
 };
 
-sectionNavigation.addEventListener("click", handleSectionClick);
+navButtonsDiv.addEventListener("click", handleSectionClick);
