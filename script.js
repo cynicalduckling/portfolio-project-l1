@@ -14,39 +14,30 @@ let myWorkButton = document.querySelector("#my-work-button");
 let contactMeButton = document.querySelector("#contact-button");
 let sidebarElement = document.querySelector("#sidebar-bottom-left");
 
-let socialsDiv = document.querySelector("#socials");
+let topRightSocialsDiv = document.querySelector("#top-right-socials");
 
 aboutMeButton.innerHTML = "∎";
 
+let sectionObjects = {
+    "about-me-button": aboutMeDiv,
+    "my-work-button": myWorkDiv,
+    "contact-button": contactDiv
+}
+
 handleSectionClick = (e) => {
-    if (e.target.id === "about-me-button") {
-        aboutMeDiv.style.display = "inline-block";
-        myWorkDiv.style.display = "none";
-        contactDiv.style.display = "none";
-        aboutMeButton.innerHTML = "∎";
-        myWorkButton.innerHTML = pageHeadings.MY_WORK;
-        contactMeButton.innerHTML = pageHeadings.CONTACT_ME;
-        socialsDiv.style.display = "none";
-        sidebarElement.style.display = "none";
-    } else if (e.target.id === "my-work-button") {
-        aboutMeDiv.style.display = "none";
-        myWorkDiv.style.display = "inline-block";
-        contactDiv.style.display = "none";
-        aboutMeButton.innerHTML = pageHeadings.ABOUT_ME;
-        myWorkButton.innerHTML = "∎";
-        contactMeButton.innerHTML = pageHeadings.CONTACT_ME;
-        sidebarElement.style.display = "none";
-        socialsDiv.style.display = "inline-block";
-    } else if (e.target.id === "contact-button") {
-        aboutMeDiv.style.display = "none";
-        myWorkDiv.style.display = "none";
-        contactDiv.style.display = "inline-block";
-        aboutMeButton.innerHTML = pageHeadings.ABOUT_ME;
-        myWorkButton.innerHTML = pageHeadings.MY_WORK;
-        contactMeButton.innerHTML = "∎";
-        socialsDiv.style.display = "inline-block";
-        sidebarElement.style.display = "inline-block";
+
+    let currentSelectionId = e.target.id;
+
+    for (let obj in sectionObjects) {
+        sectionObjects[obj].style.display = (obj === currentSelectionId) ? "inline-block" : "none";
     }
+
+    aboutMeButton.innerHTML = (currentSelectionId === "about-me-button") ? "∎" : pageHeadings.ABOUT_ME;
+    myWorkButton.innerHTML = (currentSelectionId === "my-work-button") ? "∎" : pageHeadings.MY_WORK;
+    contactMeButton.innerHTML = (currentSelectionId === "contact-button") ? "∎" : pageHeadings.CONTACT_ME;
+
+    topRightSocialsDiv.style.display = (currentSelectionId === "my-work-button" || currentSelectionId === "contact-button") ? "inline-block" : "none";
+    sidebarElement.style.display = (currentSelectionId === "contact-button") ? "inline-block" : "none";
 };
 
 sectionNavigation.addEventListener("click", handleSectionClick);
