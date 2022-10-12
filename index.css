@@ -88,7 +88,7 @@ a:hover {
 }
 
 .section-container {
-    /* border: thin solid black; */
+    border: thin solid black;
     display: flex;
     position: absolute;
     justify-content: left;
@@ -120,6 +120,7 @@ a:hover {
 
 .work-tiles {
     /* border: thin solid black; */
+    box-sizing: border-box;
     display: inline-block;
     width: 400px;
     height: 275px;
